@@ -8,6 +8,7 @@ const RocketCard = ({ rocket }: any) => {
           className="w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
           src={rocket?.flickr_images[0]}
           alt="Rocket"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col p-6 flex-grow bg-gray-900 text-white">

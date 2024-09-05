@@ -44,7 +44,7 @@ const RocketsPage = () => {
 
   return (
     <>
-      <div className="container mx-auto py-4 px-8 bg-black">
+      <div className="container mx-auto py-4 px-8 bg-black min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-white">Rockets</h1>
           <div className="relative w-full max-w-sm">

@@ -43,6 +43,7 @@ export const ImageSlider = ({ Images }: ImageSliderProps) => {
             aria-hidden={imageIndex !== index}
             className="object-cover w-full h-full flex-shrink-0 transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(${-100 * imageIndex}%)` }}
+            loading="lazy"
           />
         ))}
       </div>

@@ -101,6 +101,7 @@ export const LaunchesPage = () => {
             src={launch.links.patch.large}
             alt={launch.name}
             className="w-full h-72 rounded-lg mb-8 object-contain"
+            loading="lazy"
           />
         ) : (
           <div className="w-full h-72 bg-gray-600 rounded-lg mb-8"></div>

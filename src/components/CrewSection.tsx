@@ -81,6 +81,7 @@ const CrewSection: React.FC<CrewSectionProps> = ({ crewIds, launchId }) => {
                   src={member.image || "https://via.placeholder.com/150"}
                   alt={member.name}
                   className="w-full h-48 object-contain rounded-lg"
+                  loading="lazy"
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50 rounded-lg"></div>
               </div>
