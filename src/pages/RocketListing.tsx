@@ -30,18 +30,6 @@ const RocketsPage = () => {
     fetch_rockets();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen bg-black">
-        <div className="flex space-x-4">
-          <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse"></div>
-          <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-200"></div>
-          <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-400"></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <>
       <div className="grid-background"></div>
@@ -60,15 +48,25 @@ const RocketsPage = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {rockets
-            .filter((rocket: any) =>
-              rocket.name.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-            .map((rocket: any) => (
-              <RocketCard key={rocket.id} rocket={rocket} />
-            ))}
-        </div>
+        {loading ? (
+          <div className="flex justify-center items-center h-screen">
+            <div className="flex space-x-4">
+              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse"></div>
+              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-200"></div>
+              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-400"></div>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {rockets
+              .filter((rocket: any) =>
+                rocket.name.toLowerCase().includes(searchTerm.toLowerCase())
+              )
+              .map((rocket: any) => (
+                <RocketCard key={rocket.id} rocket={rocket} />
+              ))}
+          </div>
+        )}
       </div>
     </>
   );

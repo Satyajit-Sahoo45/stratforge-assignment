@@ -102,7 +102,7 @@ export const LaunchesListing = () => {
         </div>
 
         {loading ? (
-          <div className="flex justify-center items-center h-screen bg-black">
+          <div className="flex justify-center items-center h-screen">
             <div className="flex space-x-4">
               <div className="w-6 h-6 bg-blue-500 rounded-full animate-pulse"></div>
               <div className="w-6 h-6 bg-blue-500 rounded-full animate-pulse animation-delay-200"></div>

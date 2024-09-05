@@ -130,7 +130,7 @@ const RocketDetail = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-black">
+      <div className="flex justify-center items-center h-screen">
         <div className="flex space-x-4">
           <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse"></div>
           <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-200"></div>
@@ -142,7 +142,8 @@ const RocketDetail = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-col p-8 text-white bg-black">
+      <div className="grid-background"></div>
+      <div className="flex justify-center items-center flex-col p-8 text-white">
         <ImageSlider Images={rocketData?.flickr_images || []} />
         <div className="flex flex-col items-start mt-8 max-w-4xl w-full  p-6 rounded-lg shadow-lg">
           <div className="flex justify-between items-center w-full">
