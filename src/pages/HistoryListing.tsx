@@ -52,7 +52,8 @@ const HistoryPage = () => {
 
   return (
     <>
-      <div className="container mx-auto py-8 px-4 bg-black">
+      <div className="grid-background"></div>
+      <div className="container mx-auto py-8 px-8">
         <h1 className="text-4xl font-bold text-white mb-6">SpaceX History</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {history.map((event) => (
