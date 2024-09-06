@@ -1,42 +1,50 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
     <nav className="bg-black shadow-lg">
       <div className="container mx-auto flex items-center justify-between p-4 px-8">
-        <div className="text-white text-xl font-bold">
-          <span>SpaceX</span>
+        <div className="gradient-title text-xl font-bold cursor-pointer">
+          <Link to={"/"}>SpaceX</Link>
         </div>
 
         <div className="hidden md:flex space-x-4">
           <Link
             to="/history"
-            className="text-white hover:text-gray-400 transition duration-300"
+            className={`${
+              isActive("/history") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300`}
           >
             History
           </Link>
           <Link
             to="/launches"
-            className="text-white hover:text-gray-400 transition duration-300"
+            className={`${
+              isActive("/launches") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300`}
           >
             Launches
           </Link>
           <Link
             to="/"
-            className="text-white hover:text-gray-400 transition duration-300"
+            className={`${
+              isActive("/") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300`}
           >
             Rockets
           </Link>
         </div>
 
-        {/* Mobile menu button */}
         <button onClick={toggleMenu} className="md:hidden text-white">
           {isMenuOpen ? (
             <svg
@@ -82,21 +90,27 @@ const Navbar = () => {
         <div className="flex flex-col items-center justify-center h-full space-y-4">
           <Link
             to="/history"
-            className="text-white hover:text-gray-400 transition duration-300 text-lg"
+            className={`${
+              isActive("/history") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300 text-lg`}
             onClick={toggleMenu}
           >
             History
           </Link>
           <Link
             to="/launches"
-            className="text-white hover:text-gray-400 transition duration-300 text-lg"
+            className={`${
+              isActive("/launches") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300 text-lg`}
             onClick={toggleMenu}
           >
             Launches
           </Link>
           <Link
             to="/"
-            className="text-white hover:text-gray-400 transition duration-300 text-lg"
+            className={`${
+              isActive("/") ? "text-green-400" : "text-white"
+            } hover:text-gray-400 transition duration-300 text-lg`}
             onClick={toggleMenu}
           >
             Rockets
