@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { SearchIcon } from "lucide-react";
 import RocketCard from "../components/RocketCard";
+import { Helmet } from "react-helmet-async";
 
 const RocketsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -32,6 +33,10 @@ const RocketsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Rockets</title>
+        <meta name="description" content="SpaceX Rockets" />
+      </Helmet>
       <div className="grid-background"></div>
       <div className="container mx-auto py-8 px-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">

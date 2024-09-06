@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { FaReddit, FaWikipediaW, FaYoutubeSquare } from "react-icons/fa";
 import CrewSection from "../components/CrewSection";
 import { ImageSlider } from "../components/Slider";
+import { Helmet } from "react-helmet-async";
 
 interface Crew {
   crew: string;
@@ -75,6 +76,10 @@ export const LaunchesPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{launch?.name || "Launch"}</title>
+        <meta name="description" content={launch?.details as string} />
+      </Helmet>
       <div className="grid-background"></div>
       <div className=" min-h-screen text-white flex flex-col items-center py-12 px-4">
         {loading ? (

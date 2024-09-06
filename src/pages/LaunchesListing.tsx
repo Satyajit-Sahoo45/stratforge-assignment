@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 interface Launch {
   id: string;
@@ -43,6 +44,10 @@ export const LaunchesListing = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Launches</title>
+        <meta name="description" content="SpaceX Launches" />
+      </Helmet>
       <div className="grid-background"></div>
       <div className="container mx-auto py-8 px-4 min-h-screen">
         <h1 className="text-5xl font-extrabold text-center text-white mb-12 tracking-wide">

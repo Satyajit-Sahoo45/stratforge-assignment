@@ -2,11 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RocketsPage from "./pages/RocketListing";
 import RocketDetail from "./pages/RocketPage";
 import HistoryPage from "./pages/HistoryListing";
-// import Navbar from "./components/Navbar";
-import { LaunchesListing } from "./pages/LunchesListing";
+import { LaunchesListing } from "./pages/LaunchesListing";
 import { LaunchesPage } from "./pages/LaunchesPage";
 import "./App.css";
 import AppLayout from "./layouts/app-layout";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  );
 }
 
 export default App;

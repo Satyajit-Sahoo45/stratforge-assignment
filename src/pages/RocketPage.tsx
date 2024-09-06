@@ -6,6 +6,7 @@ import { Globe } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { ImageSlider } from "../components/Slider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 interface Rocket {
   id: string;
@@ -142,6 +143,10 @@ const RocketDetail = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{rocketData?.name || "Launch"}</title>
+        <meta name="description" content={rocketData?.description as string} />
+      </Helmet>
       <div className="grid-background"></div>
       <div className="flex justify-center items-center flex-col p-8 text-white">
         <ImageSlider Images={rocketData?.flickr_images || []} />

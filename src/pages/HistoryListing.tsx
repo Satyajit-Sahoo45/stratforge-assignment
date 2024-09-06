@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ExternalLinkIcon } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 interface HistoryEvent {
   id: string;
@@ -40,6 +41,10 @@ const HistoryPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>History</title>
+        <meta name="description" content="SpaceX History" />
+      </Helmet>
       <div className="grid-background"></div>
       <div className="container mx-auto py-8 px-8">
         <h1 className="text-4xl font-bold text-white mb-6">SpaceX History</h1>
