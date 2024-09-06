@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 interface CrewMember {
   id: string;
@@ -35,7 +36,7 @@ const CrewSection: React.FC<CrewSectionProps> = ({ crewIds, launchId }) => {
           setCrew(response.data.docs);
         }
       } catch (error) {
-        console.error("Error fetching crew data:", error);
+        toast.error("Error fetching crew data");
       } finally {
         setLoading(false);
       }

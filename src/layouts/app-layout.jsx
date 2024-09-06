@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const AppLayout = () => {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="min-h-screen bg-black">
       <main className="relative z-10">
         <Navbar />
         <Outlet />

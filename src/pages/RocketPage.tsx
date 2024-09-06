@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { ImageSlider } from "../components/Slider";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 interface Rocket {
   id: string;
@@ -120,7 +121,7 @@ const RocketDetail = () => {
         );
         setRocketData(res.data);
       } catch (error) {
-        console.error("Error fetching rocket data:", error);
+        toast.error("Error fetching rocket data");
       } finally {
         setLoading(false);
       }

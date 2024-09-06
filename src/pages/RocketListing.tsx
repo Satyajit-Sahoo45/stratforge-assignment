@@ -5,6 +5,7 @@ import axios from "axios";
 import { SearchIcon } from "lucide-react";
 import RocketCard from "../components/RocketCard";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const RocketsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +24,7 @@ const RocketsPage = () => {
           setRockets(response.data);
         }
       } catch (error) {
-        console.error("Error fetching rocket data:", error);
+        toast.error("Error fetching rocket data");
       } finally {
         setLoading(false);
       }

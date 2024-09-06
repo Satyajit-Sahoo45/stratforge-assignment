@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 interface Launch {
   id: string;
@@ -33,7 +34,7 @@ export const LaunchesListing = () => {
           );
         }
       } catch (error) {
-        console.error("Error fetching launch data:", error);
+        toast.error("Error fetching launch data");
       } finally {
         setLoading(false);
       }

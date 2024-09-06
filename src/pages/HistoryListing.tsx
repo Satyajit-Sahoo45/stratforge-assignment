@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { ExternalLinkIcon } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 interface HistoryEvent {
   id: string;
@@ -30,7 +31,7 @@ const HistoryPage = () => {
           setHistory(response.data);
         }
       } catch (error) {
-        console.error("Error fetching history data:", error);
+        toast.error("Error fetching history data");
       } finally {
         setLoading(false);
       }

@@ -7,6 +7,7 @@ import { LaunchesPage } from "./pages/LaunchesPage";
 import "./App.css";
 import AppLayout from "./layouts/app-layout";
 import { HelmetProvider } from "react-helmet-async";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ function App() {
   return (
     <HelmetProvider>
       <RouterProvider router={router} />
+      <Toaster position="bottom-right" reverseOrder={false} />
     </HelmetProvider>
   );
 }

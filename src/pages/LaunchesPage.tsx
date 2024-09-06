@@ -5,6 +5,7 @@ import { FaReddit, FaWikipediaW, FaYoutubeSquare } from "react-icons/fa";
 import CrewSection from "../components/CrewSection";
 import { ImageSlider } from "../components/Slider";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 interface Crew {
   crew: string;
@@ -48,7 +49,7 @@ export const LaunchesPage = () => {
           setLaunch(response.data);
         }
       } catch (error) {
-        console.error("Error fetching launch data:", error);
+        toast.error("Error fetching launch data");
       } finally {
         setLoading(false);
       }
@@ -65,7 +66,7 @@ export const LaunchesPage = () => {
         );
         setRocketData(res.data?.flickr_images);
       } catch (error) {
-        console.error("Error fetching rocket data:", error);
+        toast.error("Error fetching rocket data");
       } finally {
         setLoading(false);
       }

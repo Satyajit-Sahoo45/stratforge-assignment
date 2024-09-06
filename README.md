@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# SpaceX Info Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React** web application that displays SpaceX-related information fetched from the SpaceX API. It includes pages for **History**, **Launches**, and **Rockets**, with detailed information about each rocket, including images and technical specifications.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [How to Run Locally](#how-to-run-locally)
+
+## Tech Stack
+
+### Frameworks and Libraries
+
+- **React**: A JavaScript library for building user interfaces. React was chosen for its component-based architecture, which allows for modular, reusable components.
+- **TypeScript**: TypeScript adds static typing, which helps catch potential bugs early in development, especially when working with complex API data structures like those from the SpaceX API.
+- **Tailwind CSS**: A utility-first CSS framework used to build a responsive and visually appealing UI without the need to write custom CSS for every component.
+- **Axios**: Used to make HTTP requests to the SpaceX API. It's lightweight, promise-based, and easy to integrate with React.
+- **React Router**: Enables client-side routing in the app, allowing smooth navigation between pages like **History**, **Launches**, and **Rocket Details** without reloading the page.
+- **Helmet (React Helmet Async)**: Used for setting and updating metadata dynamically in the document head, crucial for SEO and accessibility.
+
+### Why These Choices?
+
+- **React** is flexible and widely used for building dynamic, single-page applications. The component-based design makes it easy to manage and scale the project.
+- **TypeScript** improves the maintainability and scalability of the application by providing static type checks and reducing runtime errors.
+- **Tailwind CSS** enables quick prototyping and responsive designs without writing a lot of custom CSS.
+- **React Router** helps in setting up dynamic routing and seamless navigation within the app.
+
+## Project Structure
+
+```bash
+.
+├── src
+│   ├── components
+│   │   ├── CrewSection.tsx        # Component to display crew info for launches
+│   │   ├── ImageSlider.tsx        # A reusable image slider
+│   │   ├── Navbar.tsx             # Navigation bar with menu links
+│   │   └── RocketDetail.tsx       # Detailed view of a specific rocket
+│   ├── pages
+│   │   ├── HistoryPage.tsx        # Page displaying SpaceX historical events
+│   │   ├── LaunchesPage.tsx       # Page for listing launches (Latest, past and upcoming)
+│   │   ├── RocketsPage.tsx        # Page displaying SpaceX rockets
+│   │   └── RocketDetailPage.tsx   # Dynamic page for displaying rocket details
+│   ├── App.tsx                    # Main app component
+```
+
+## How to Run Locally
+
+1. Clone the repo on you local
+
+2. Install dependencies:
+
+### `npm install`
+
+3. Start the development server:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
