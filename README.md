@@ -49,7 +49,7 @@ This is a **React** web application that displays SpaceX-related information fet
 
 ## How to Run Locally
 
-1. Clone the repo on you local
+1. Clone the repo on you local(`https://github.com/Satyajit-Sahoo45/stratforge-assignment.git`)
 
 2. Install dependencies:
 
