@@ -56,9 +56,9 @@ const RocketsPage = () => {
         {loading ? (
           <div className="flex justify-center items-center h-screen">
             <div className="flex space-x-4">
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse"></div>
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-200"></div>
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-pulse animation-delay-400"></div>
+              <div className="w-5 h-5 bg-indigo-400 rounded-full animate-pulse"></div>
+              <div className="w-5 h-5 bg-indigo-400 rounded-full animate-pulse animation-delay-200"></div>
+              <div className="w-5 h-5 bg-indigo-400 rounded-full animate-pulse animation-delay-400"></div>
             </div>
           </div>
         ) : (

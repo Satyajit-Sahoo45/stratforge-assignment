@@ -166,7 +166,7 @@ const RocketDetail = () => {
           <p className="text-lg mb-4">{rocketData?.description}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
                 Dimensions
               </h2>
               <p className="text-md">
@@ -179,13 +179,15 @@ const RocketDetail = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">Mass</h2>
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
+                Mass
+              </h2>
               <p className="text-md">
                 Mass: {rocketData?.mass.kg} kg ({rocketData?.mass.lb} lb)
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
                 First Stage
               </h2>
               <p className="text-md">
@@ -205,7 +207,7 @@ const RocketDetail = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
                 Second Stage
               </h2>
               <p className="text-md">
@@ -246,7 +248,9 @@ const RocketDetail = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">Engines</h2>
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
+                Engines
+              </h2>
               <p className="text-md">
                 ISP (Sea Level): {rocketData?.engines.isp.sea_level}
               </p>
@@ -265,7 +269,7 @@ const RocketDetail = () => {
               <p className="text-md">Type: {rocketData?.engines.type}</p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
                 Landing Legs
               </h2>
               <p className="text-md">
@@ -276,7 +280,7 @@ const RocketDetail = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2 underline">
+              <h2 className="text-xl font-semibold mb-2 text-indigo-400">
                 Payload Weights
               </h2>
               {rocketData?.payload_weights.map((weight) => (
