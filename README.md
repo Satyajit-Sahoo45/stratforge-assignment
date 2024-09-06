@@ -36,12 +36,15 @@ This is a **React** web application that displays SpaceX-related information fet
 │   │   ├── ImageSlider.tsx        # A reusable image slider
 │   │   ├── Navbar.tsx             # Navigation bar with menu links
 │   │   └── RocketDetail.tsx       # Detailed view of a specific rocket
+│   ├── layouts
+│   │   └── AppLayout.tsx          # Layout component wrapping the app with Navbar and Outlet(react-router-dom)
 │   ├── pages
-│   │   ├── HistoryPage.tsx        # Page displaying SpaceX historical events
-│   │   ├── LaunchesPage.tsx       # Page for listing launches (Latest, past and upcoming)
-│   │   ├── RocketsPage.tsx        # Page displaying SpaceX rockets
-│   │   └── RocketDetailPage.tsx   # Dynamic page for displaying rocket details
-│   ├── App.tsx                    # Main app component
+│   │   ├── HistoryListing.tsx     # Page displaying SpaceX historical events
+│   │   ├── LaunchesListing.tsx    # Page for listing launches data (Latest, past and upcoming)
+│   │   ├── LaunchesPage.tsx       # Page for specific launch data including crew members data
+│   │   ├── RocketsListing.tsx     # Page displaying all SpaceX rockets
+│   │   └── RocketPage.tsx         # Dynamic page for displaying specific rocket details
+│   ├── App.tsx                    # Main app component (defining routes)
 ```
 
 ## How to Run Locally
